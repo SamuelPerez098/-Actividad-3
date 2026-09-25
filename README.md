@@ -262,3 +262,27 @@ A continuación se detalla la especificación de funciones, tipos de datos y man
   3. **`mousedown` (Botón 2)**: Detecta el clic derecho, fija la coordenada $X$ inicial y cambia el cursor visual a `grabbing`.
   4. **`mousemove`**: Calcula `deltaX` para actualizar el giro de la carta en tiempo real si el clic derecho sigue activo.
   5. **`mouseup`**: Si el arrastre supera los $60^\circ$ de umbral, alterna la tarjeta entre $0^\circ$ y $180^\circ$ aplicando una transición fluida en CSS.
+
+
+  ## Capturas de Pantalla y Demostración Visual
+
+El componente interactivo cuenta con dos estados visuales principales según la cara expuesta mediante el giro de $180^\circ$:
+
+| Cara Frontal (`.card-front`) | Cara Trasera / Reverso (`.card-back`) |
+| :---: | :---: |
+| ![Cara Frontal](img/Itologo.webp) | ![Cara Trasera](img/CardREverso.webp) |
+
+### Explicación de los Componentes Visuales
+
+1. **Cara Frontal (`Itologo.webp`):**
+   * Muestra el logotipo institucional del **Instituto Tecnológico de Oaxaca (ITO)**.
+   * Cuenta con la capa interactiva `.glow` integrada que proyecta un reflejo dinámico tipo lente brillante que sigue las coordenadas exactas del puntero sobre la insignia.
+
+2. **Cara Trasera (`CardREverso.webp`):**
+   * Muestra un diseño generico 
+   * Aplica la propiedad `transform: rotateY(180deg)` y `backface-visibility: hidden` para mantenerse oculta hasta que el usuario realiza la acción de arrastre con el clic derecho y al igual que la frontal ... cuenta con detalles de iluminacion dinamica .
+
+
+ **Link del video demostrativo**
+ 
+   https://drive.google.com/file/d/1qd2UXAvJTqEofE4lzy8RLpS7s7folYme/view?usp=drive_link
