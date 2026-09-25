@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    user-select: none; /* Evita selección accidental al arrastrar */
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #11111d);
+    perspective: 1200px;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    cursor: grab;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.2s ease;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 1.5em;
+    border-radius: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+/* Frente */
+.card-front {
+    background-image: url('../img/Itologo.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: right;
+}
+
+/* Reverso */
+.card-back {
+    background-image: url('../img/CardREverso.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotateY(180deg);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    border-radius: 12px;
+    background-image: radial-gradient(circle at 50% -20%, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
+}

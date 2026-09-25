@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Interactive Card Component</title>
+    <link rel="stylesheet" href="css/card3d.css">
+</head>
+<body>
+
+    <!-- COMPONENTE CARTA 3D INTERACTIVA -->
+    <div class="card">
+        <div class="card-inner">
+            <!-- Cara Frontal -->
+            <div class="card-front">
+               
+                <div class="glow"></div>
+            </div>
+            <!-- Cara Trasera -->
+            <div class="card-back">
+               
+                <div class="glow"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/card3d.js"></script>
+    <script>
+        // Inicializar el componente interactivo
+        initInteractive3DCard('.card');
+    </script>
+</body>
+</html>
